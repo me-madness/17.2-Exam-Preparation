@@ -1,14 +1,14 @@
-encrypted_message = input().split()
 
 while True:
+    encrypted_message = input().split()
     command = input().split("|")
     if command[0] == "Decode":
         break
     elif command[0] == "Move":
         index = command[1]
-        for i in encrypted_message(int(index)):
-            encrypted_message.remove(i)
-            encrypted_message.append(i)
+        for letter in encrypted_message(int(index)):
+            encrypted_message.remove(letter)
+            encrypted_message.append(letter)
             print(encrypted_message)
     elif command[0] == "Insert":
         index_value = command[1]
