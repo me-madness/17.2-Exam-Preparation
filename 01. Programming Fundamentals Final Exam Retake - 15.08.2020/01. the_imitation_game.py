@@ -6,7 +6,7 @@ while True:
         break
     elif command[0] == "Move":
         index = command[1]
-        for i in range(int(index)):
+        for i in encrypted_message(int(index)):
             encrypted_message.remove(i)
             encrypted_message.append(i)
             print(encrypted_message)
